@@ -8,6 +8,7 @@
     <!-- http://t.co/dKP3o1e -->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
+    <!-- viewport 可以让布局在移动浏览器上显示的更好。 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel='alternate' type='application/rss+xml' title='atom 1.0' href='/feed' />
@@ -35,8 +36,8 @@
 			});
 		});
 	</script>
-
 </head>
+
 <body>
 
     <div class="container">
@@ -52,7 +53,7 @@
 					</br>
 					{% endif %}
                 </div>
-				{% if site.configs.weixin %}
+<!-- 				{% if site.configs.weixin %}
 				<div class="ProfileWeixin">
 					<img src="/images/social/weixinqrcode.png" alt="微信二维码" style="width: 160px; border-radius:0%; -moz-border-radius:0%; -webkit-border-radius:0%; display: none" id="ProfileWeixin" />
 					<script type="text/javascript">
@@ -68,7 +69,7 @@
 						}
 					</script>
 				</div>
-				{% endif %}
+ -->				{% endif %}
 				{% if site.configs.title %}
                 <h1><a href="/">{{ site.configs.title }}</a></h1>
 				{% endif %}
@@ -102,13 +103,13 @@
                         {% if has('about.md') %}
                         <li><a href="/about.md">关于</a></li>
                         {% endif %}
-
-
                     </ul>
                 </nav>
+                
                 <nav id="sub-nav">
                 <div class="social">
-					{% if site.configs.facebook %}
+					<!-- 
+                    {% if site.configs.facebook %}
 					<a class="facebook" href="{{ site.configs.facebook }}" title="Facebook">Facebook</a>
 					{% endif %}
 					{% if site.configs.google %}
@@ -117,49 +118,12 @@
 					{% if site.configs.twitter %}
                     <a class="twitter" href="{{ site.configs.twitter }}" title="Twitter">Twitter</a>
 					{% endif %}
+                     -->
 					{% if site.configs.github %}
                     <a class="github" href="{{ site.configs.github }}" title="GitHub">GitHub</a>
 					{% endif %}
-					{% if site.configs.linkedin %}
-					<a class="linkedin" href="{{ site.configs.linkedin }}" title="Linkedin">Linkedin</a>
-					{% endif %}
-					{% if site.configs.pinterest %}
-					<a class="pinterest" href="{{ site.configs.pinterest }}" title="Pinterest">Pinterest</a>
-					{% endif %}
-					{% if site.configs.delicious %}
-					<a class="delicious" href="{{ site.configs.delicious }}" title="Delicious">Delicious</a>
-					{% endif %}
-					{% if site.configs.pinboard %}
-					<a class="pinboard" href="{{ site.configs.pinboard }}" title="Pinboard">Pinboard</a>
-					{% endif %}
-					{% if site.configs.instagram %}
-					<a class="instagram" href="{{ site.configs.instagram }}" title="Instagram">Instagram</a>
-					{% endif %}
 					{% if site.configs.weibo %}
 					<a class="weibo" href="{{ site.configs.weibo }}" title="新浪微博">新浪微博</a>
-					{% endif %}
-					{% if site.configs.qq %}
-					<a class="qq" href="{{ site.configs.qq }}" title="腾讯微博">腾讯微博</a>
-					{% endif %}
-					{% if site.configs.qq2 %}
-					<a class="qq2" href="{{ site.configs.qq2 }}" title="QQ" target="_blank">QQ</a>
-					{% endif %}
-					{% if site.configs.qqqun %}
-					<a class="qqqun" href="{{ site.configs.qqqun }}" title="{{ site.configs.qqqunname }}"  target="_blank">{{ site.configs.qqqunname }}"</a>
-					{% endif %}
-					{% if site.configs.weixin %}
-					<a class="weixin" href="/images/social/weixinqrcode.png" title="{{ site.configs.weixin }}" target="_blank" onmouseover="weixin_mouseOver()" onmouseout="weixin_mouseOut()">微信</a>
-					<script type="text/javascript">
-						$(document).ready(function(){
-							$(".weixin").removeAttr("rel");
-						});
-					</script>
-					{% endif %}
-					{% if site.configs.douban %}
-					<a class="douban" href="{{ site.configs.douban }}" title="豆瓣">豆瓣</a>
-					{% endif %}
-					{% if site.configs.fanfou %}
-					<a class="fanfou" href="{{ site.configs.fanfou }}" title="饭否">饭否</a>
 					{% endif %}
 					{% if site.configs.zhihu %}
 					<a class="zhihu" href="{{ site.configs.zhihu }}" title="知乎">知乎</a>
@@ -170,18 +134,25 @@
 					{% if site.configs.rss %}
                     <a class="rss" href="{{ site.configs.rss }}" title="RSS">RSS</a>
 					{% endif %}
+                
+                    {% if site.configs.author %}
+                    <section>
+                        <h2>关于作者</h2>
+                       <!--  <p>{{ site.configs.authorinfo }}</p> -->
+                        <p>整天想代码，半个厨子心。</p>
+                    </section>
+                    {% endif %}
                 </div>
                 </nav>
 
-                <br/>
+                <!--<br/>
 				{% if site.configs.author %}
                 <section>
-                    <h2>关于作者</h2>
-                    <p>{{ site.configs.authorinfo }}</p>
+                    <h2>关于作者2</h2>
+                    <p>{{ site.configs.authorinfo }}</p>                    
                 </section>
 				{% endif %}
-
-                </br>
+                 </br>
 				{% if site.configs.something %}
                 <section>
 					{% if site.configs.somethingtitle %}
@@ -189,7 +160,7 @@
 					{% endif %}
                     <p>{{ site.configs.something }}</p>
                 </section>
-				{% endif %}
+				{% endif %} -->
             </header>               
             </div>
         </div>  
@@ -198,5 +169,3 @@
     </div>
 </body>
 </html>
-
-
